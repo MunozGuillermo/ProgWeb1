@@ -132,9 +132,17 @@ function gameOver() {
   board.classList.remove('disabled');
 }
 
-darkModeBtn.addEventListener('click', () => {
+function toggleDarkMode() {
   document.body.classList.toggle('dark-mode');
   darkModeBtn.textContent = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+}
+
+darkModeBtn.addEventListener('click', toggleDarkMode);
+
+document.addEventListener('keydown', (e) => {
+  if (e.key.toLowerCase() === 'd') {
+    toggleDarkMode();
+  }
 });
 
 setupBoard();
