@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simon Dice</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <h1>Simon Dice</h1>
+    <button id="dark-mode-btn" aria-label="Cambiar modo oscuro">🌙</button>
+  </header>
+
+  <main>
+
+    <section id="controls">
+      <div id="difficulty-selector">
+        <button class="difficulty-btn" data-difficulty="facil">Fácil</button>
+        <button class="difficulty-btn" data-difficulty="medio">Medio</button>
+        <button class="difficulty-btn" data-difficulty="dificil">Difícil</button>
+      </div>
+
+      <button id="start-btn">Empezar</button>
+
+      <p id="scoreboard">Ronda: <span id="round-count">0</span></p>
+    </section>
+
+    <p id="status-message">Elige una dificultad y pulsa "Empezar"</p>
+
+    <section id="board">
+      <button class="color-btn" id="btn-rojo"     data-color="rojo"></button>
+      <button class="color-btn" id="btn-azul"     data-color="azul"></button>
+      <button class="color-btn" id="btn-verde"    data-color="verde"></button>
+      <button class="color-btn" id="btn-amarillo" data-color="amarillo"></button>
+      <button class="color-btn" id="btn-morado"   data-color="morado"></button>
+      <button class="color-btn" id="btn-naranja"  data-color="naranja"></button>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
