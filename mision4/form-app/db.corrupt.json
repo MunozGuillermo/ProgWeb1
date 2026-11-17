@@ -1,0 +1,16 @@
+{
+  "registrations": [
+    {
+      "id": 99,
+      "nickname": "roto",
+      "email": "roto@x.com",
+      "age": "veinte",
+      "game": "tetris",
+      "mode": "solo",
+      "teamName": "",
+      "discord": "",
+      "acceptRules": true,
+      "createdAt": "2026-11-17T10:00:00.000Z"
+    }
+  ]
+}

@@ -1,3 +1,16 @@
 {
-  "registrations": []
+  "registrations": [
+    {
+      "nickname": "guille",
+      "email": "guille@got.com",
+      "age": 22,
+      "game": "lol",
+      "mode": "solo",
+      "teamName": "",
+      "discord": "uwu",
+      "acceptRules": true,
+      "createdAt": "2026-11-17T19:08:49.623Z",
+      "id": 1
+    }
+  ]
 }

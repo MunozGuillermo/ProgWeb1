@@ -8,6 +8,7 @@ import {
   type RegistrationFormValues,
 } from '../schemas/registration'
 import { Field } from './Field'
+import { useCreateRegistration } from '../hooks/useCreateRegistration'
 
 export function RegistrationForm() {
   const {
@@ -27,10 +28,23 @@ export function RegistrationForm() {
     },
   })
 
-  const onSubmit = (values: RegistrationFormValues) => {
-    console.log(values)
-    reset()
-  }
+    const mutation = useCreateRegistration()
+
+    const onSubmit = (values: RegistrationFormValues) => {
+    mutation.mutate(values, { onSuccess: () => reset() })
+    }
+
+    {mutation.isError && (
+        <p role="alert" className="error">{mutation.error.message}</p>
+    )}
+    {mutation.isSuccess && (
+        <p role="status" className="success">¡Inscripción registrada!</p>
+    )}
+
+    // botón:
+    <button type="submit" disabled={mutation.isPending}>
+    {mutation.isPending ? 'Enviando…' : 'Inscribirme'}
+    </button>
 
   // Atributos de accesibilidad comunes a cada input
   const a11y = (name: keyof RegistrationFormValues) => ({
