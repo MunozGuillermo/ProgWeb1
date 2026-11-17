@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query'
-import { fetchRegistrations } from '../api/registrations.ts'
+import { fetchRegistrations } from '../api/registrations'
 
 export const registrationsKey = ['registrations'] as const
 
