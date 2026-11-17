@@ -57,3 +57,10 @@ export const registrationSchema = z
   })
 
 export type RegistrationFormValues = z.infer<typeof registrationSchema>
+
+export const GAME_LABELS: Record<(typeof GAMES)[number], string> = {
+  valorant: 'Valorant',
+  lol: 'League of Legends',
+  'rocket-league': 'Rocket League',
+  fc: 'EA FC',
+}
